@@ -8,6 +8,34 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <header>
+        <h1 class="title">Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <h2 class="card-header">Search for a City:</h2>
+                <form id="user-form" class="card-body">
+                    <input name="city" id="city" type="text" autofocus="true" class="form-input"/>
+                    <button type="submit" class="btn">Search Icon</button>
+                </form>
+                <section class="search-history">
+                    <div class="history-list"></div>
+                </section>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+            <div class="row">
+                <h2 class="subtitle">City Name (M/DD/YYYY) <span class="icon">Icon</span></h2>
+                <div id="weather-container" class="daily-forecast"></div>
+            </div>
+            <div class="row">
+                <div id="weather-container" class="5-day-forecast"></div>
+            </div>
+        </div>
+    </main>
     
     <script src="./assets/js/script.js"></script>
 </body>
