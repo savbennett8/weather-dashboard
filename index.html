@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -18,21 +20,22 @@
                 <h2 class="card-header">Search for a City:</h2>
                 <form id="user-form" class="card-body">
                     <input name="city" id="city" type="text" autofocus="true" class="form-input"/>
-                    <button type="submit" class="btn">Search Icon</button>
+                    <button type="submit" class="search-btn"><span class="oi oi-magnifying-glass"></span></button>
                 </form>
                 <section class="search-history">
-                    <div class="history-list"></div>
+                    <div class="history-list">your search history here</div>
                 </section>
             </div>
         </div>
 
         <div class="col-12 col-md-8">
-            <div class="row">
+            <div class="row daily-forecast">
                 <h2 class="subtitle">City Name (M/DD/YYYY) <span class="icon">Icon</span></h2>
-                <div id="weather-container" class="daily-forecast"></div>
+                <div id="weather-container" ></div>
             </div>
-            <div class="row">
-                <div id="weather-container" class="5-day-forecast"></div>
+            <div class="row future-forecast">
+                <h2 class="subtitle">5-Day Forecast:</h2>
+                <div id="weather-container"></div>
             </div>
         </div>
     </main>
