@@ -44,11 +44,23 @@ header {
     font-size: 20px;
 }
 
-.daily-forecast,
-.future-forecast {
+#daily-forecast,
+#future-forecast {
     height: 450px;
 }
 
 .daily-forecast {
     padding-top: 20px;
+}
+
+
+.subtitle {
+    display: flex;
+    align-items: baseline;
+}
+
+#city-name,
+#date,
+#icon {
+    padding-right: 5px;
 }
