@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-3">
             <div class="card">
                 <h2 class="card-header">Search for a City:</h2>
                 <form id="user-form" class="card-body">
@@ -29,18 +29,100 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-9">
             <div class="row" id="daily-forecast">
                 <div class="subtitle">
                     <h2 id="city-name"></h2>
                     <h2 id="date"> </h2>
                     <img id="icon"></img>
                 </div>
-                <div id="daily-container" ></div>
+                <div id="daily-container" >
+                    <div class="weather-div">
+                        <p>Temperature: </p>
+                        <p id="today-temp"></p>
+                    </div>
+                    <div class="weather-div">
+                        <p>Humidity: </p>
+                        <p id="today-humidity"></p>
+                    </div>
+                    <div class="weather-div">
+                        <p>Wind Speed: </p>
+                        <p id="wind"></p>
+                    </div>
+                    <div class="weather-div">
+                        <p>UV Index: </p>
+                        <p id="uv-index"></p>
+                    </div>
+                </div>
             </div>
             <div class="row" id="future-forecast">
                 <h2>5-Day Forecast:</h2>
-                <div id="outlook-container"></div>
+                <div id="outlook-container">
+                    <div id="card" class="outlook-cards col-md-2">
+                        <h3 id="date1" class="dates"></h3>
+                        <div class="weather-div">Icon</div>
+                        <div class="weather-div">
+                            <p>Temp: </p>
+                            <p id="date1-temp"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Humidity: </p>
+                            <p id="date1-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div id="card" class="outlook-cards col-md-2">
+                        <h3 id="date2" class="dates"></h3>
+                        <div class="weather-div">Icon</div>
+                        <div class="weather-div">
+                            <p>Temp: </p>
+                            <p id="date2-temp"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Humidity: </p>
+                            <p id="date2-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div id="card" class="outlook-cards col-md-2">
+                        <h3 id="date3" class="dates"></h3>
+                        <div class="weather-div">Icon</div>
+                        <div class="weather-div">
+                            <p>Temp: </p>
+                            <p id="date3-temp"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Humidity: </p>
+                            <p id="date3-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div id="card" class="outlook-cards col-md-2">
+                        <h3 id="date4" class="dates"></h3>
+                        <div class="weather-div">Icon</div>
+                        <div class="weather-div">
+                            <p>Temp: </p>
+                            <p id="date4-temp"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Humidity: </p>
+                            <p id="date4-humidity"></p>
+                        </div>
+                    </div>
+
+                    <div id="card" class="outlook-cards col-md-2">
+                        <h3 id="date5" class="dates"></h3>
+                        <div class="weather-div">Icon</div>
+                        <div class="weather-div">
+                            <p>Temp: </p>
+                            <p id="date5-temp"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Humidity: </p>
+                            <p id="date5-humidity"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
