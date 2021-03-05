@@ -26,19 +26,19 @@ let historyMaker = function() {
     historyList.appendChild(listButton);
 }
 
-//when history list item is clicked, call weather function
-
-
 //fetch api for daily forecast from openweathermap
 let getWeatherToday = function() {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityInputEl.value + '&appid=f569c1389ce0a742790e8dd21053476d')
     .then(function(city) {
         return city.json();
     })
-    .then(function(city) {
-        console.log(city);
+    .then(function(data) {
+        console.log(data.main.temp);
     })
 }
+
+//when history list item is clicked, call weather function
+
 
 searchBtnEl.addEventListener("click", function(event) {
     event.preventDefault();
