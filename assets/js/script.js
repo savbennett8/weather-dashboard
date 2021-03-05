@@ -33,11 +33,8 @@ let getWeatherToday = function() {
         return city.json();
     })
     .then(function(data) {
-        let iconDiv = document.querySelector(".subtitle");
-        let todayIconEl = document.createElement("img");
-        todayIconEl.src = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
-        iconDiv.appendChild(todayIconEl);
-        console.log(data.weather[0].icon);
+        let iconEl = document.querySelector("#icon");
+        iconEl.src = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
 
         let todayTempEl = document.getElementById("today-temp");
         let todayTemp = data.main.temp;
