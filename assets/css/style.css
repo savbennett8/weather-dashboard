@@ -13,10 +13,13 @@ header {
     font-weight: lighter;
 }
 
+.history-container {
+    height: 650px;
+    background-color: rgb(230, 230, 230);
+}
+
 .card {
     background-color: rgb(230, 230, 230);
-    height: 900px;
-    padding-left: 10px;
 }
 
 .card-body {
@@ -50,15 +53,9 @@ header {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.562);
 }
 
-#daily-forecast,
-#future-forecast {
-    height: 350px;
-}
-
 .daily-forecast {
     padding-top: 20px;
 }
-
 
 .subtitle {
     display: flex;
@@ -69,7 +66,7 @@ header {
 .outlook-cards {
     background-color: rgb(54, 54, 230);
     color: white;
-    height: 300px;
+    height: 250px;
     width: 175px;
     border-radius: 5px;
     margin-right: 12px;

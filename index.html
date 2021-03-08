@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
     <title>Weather Dashboard</title>
 </head>
+
 <body>
     <header>
         <h1 class="title">Weather Dashboard</h1>
     </header>
 
     <main>
-        <div class="col-12 col-md-3">
-            <div class="card">
-                <h2 class="card-header">Search for a City:</h2>
-                <form id="user-form" class="card-body">
-                    <input id="city" type="text" class="form-input" placeholder="City Name"/>
-                    <button type="submit" class="search-btn btn-primary"><span class="oi oi-magnifying-glass"></span></button>
-                </form>
-                <section class="search-history">
-                    <div id="history-list"></div>
-                </section>
+        <div class="row">
+            <div class="history-container col-12 col-md-3">
+                <div class="card">
+                    <h3 class="card-header">Search for a City:</h3>
+                    <form id="user-form" class="card-body">
+                        <input id="city" type="text" class="form-input" placeholder="City Name" />
+                        <button type="submit" class="search-btn btn-primary"><span
+                                class="oi oi-magnifying-glass"></span></button>
+                    </form>
+                    <section class="search-history">
+                        <div id="history-list"></div>
+                    </section>
+                </div>
             </div>
-        </div>
 
-        <div class="col-12 col-md-9">
-            <div class="row" id="daily-forecast">
-                <div class="subtitle">
-                    <h2 id="city-name"></h2>
-                    <h2 id="date"> </h2>
-                    <img id="icon">
+            <div class="col-12 col-md-9">
+                <div class="row" id="daily-forecast">
+                    <div class="subtitle col-12">
+                        <h2 id="city-name"></h2>
+                        <h2 id="date"> </h2>
+                        <img id="icon">
+                    </div>
+                    <div id="daily-container">
+                        <div class="weather-div">
+                            <p>Temperature: </p>
+                            <p id="today-temp"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Humidity: </p>
+                            <p id="today-humidity"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>Wind Speed: </p>
+                            <p id="wind"></p>
+                        </div>
+                        <div class="weather-div">
+                            <p>UV Index: </p>
+                            <p id="uv-index"></p>
+                        </div>
+                    </div>
                 </div>
-                <div id="daily-container" >
-                    <div class="weather-div">
-                        <p>Temperature: </p>
-                        <p id="today-temp"></p>
-                    </div>
-                    <div class="weather-div">
-                        <p>Humidity: </p>
-                        <p id="today-humidity"></p>
-                    </div>
-                    <div class="weather-div">
-                        <p>Wind Speed: </p>
-                        <p id="wind"></p>
-                    </div>
-                    <div class="weather-div">
-                        <p>UV Index: </p>
-                        <p id="uv-index"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="future-forecast">
                 <h2>5-Day Forecast:</h2>
-                <div id="outlook-container">
-                    <div id="card" class="outlook-cards col-md-2">
+                <div class="row" id="future-forecast">
+                    <div id="card" class="outlook-cards col-md-2.5">
                         <h3 id="date1" class="dates"></h3>
                         <img id="date1-icon">
                         <div class="weather-div">
@@ -71,7 +76,7 @@
                         </div>
                     </div>
 
-                    <div id="card" class="outlook-cards col-md-2">
+                    <div id="card" class="outlook-cards col-md-2.5">
                         <h3 id="date2" class="dates"></h3>
                         <img id="date2-icon">
                         <div class="weather-div">
@@ -84,7 +89,7 @@
                         </div>
                     </div>
 
-                    <div id="card" class="outlook-cards col-md-2">
+                    <div id="card" class="outlook-cards col-md-2.5">
                         <h3 id="date3" class="dates"></h3>
                         <img id="date3-icon">
                         <div class="weather-div">
@@ -97,7 +102,7 @@
                         </div>
                     </div>
 
-                    <div id="card" class="outlook-cards col-md-2">
+                    <div id="card" class="outlook-cards col-md-2.5">
                         <h3 id="date4" class="dates"></h3>
                         <img id="date4-icon">
                         <div class="weather-div">
@@ -110,7 +115,7 @@
                         </div>
                     </div>
 
-                    <div id="card" class="outlook-cards col-md-2">
+                    <div id="card" class="outlook-cards col-md-2.5">
                         <h3 id="date5" class="dates"></h3>
                         <img id="date5-icon">
                         <div class="weather-div">
@@ -122,13 +127,15 @@
                             <p id="date5-humidity"></p>
                         </div>
                     </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
     </main>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
